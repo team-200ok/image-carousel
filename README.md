@@ -52,3 +52,14 @@ npm install -g webpack
 npm install
 ```
 
+### CRUD API
+
+Create/POST : n/a
+
+READ/GET : /api/carousel/:resterauntId -> gets joined table info for commentors tied to images which are tied to specific resterauntId
+
+Update/PUT : /api/helpful/:resterauntId -> updates number of helpful count of the image by +1 or -1
+
+Update/PUT : /api/notHelpful/:resterauntId -> updates number of not_helpful count of image by +1 or -1
+
+Delete/DELETE : n/a
