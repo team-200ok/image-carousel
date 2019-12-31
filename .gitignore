@@ -5,6 +5,10 @@
 npm
 npm-debug.log
 node_modules/
+cuisines.csv
+images.csv
+restaurants.csv
+users.csv
 
 pids
 *.pid

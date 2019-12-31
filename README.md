@@ -54,12 +54,12 @@ npm install
 
 ### CRUD API
 
-Create/POST : n/a
+Create/POST : /api/carousel/create -> Post a image to yelp
 
-READ/GET : /api/carousel/:resterauntId -> gets joined table info for commentors tied to images which are tied to specific resterauntId
+READ/GET : /api/carousel/:resterauntId -> Look up images where resteraunt reference matches resteraunt on the page
 
 Update/PUT : /api/helpful/:resterauntId -> updates number of helpful count of the image by +1 or -1
 
 Update/PUT : /api/notHelpful/:resterauntId -> updates number of not_helpful count of image by +1 or -1
 
-Delete/DELETE : n/a
+Delete/DELETE : /api delete image from yelp image carousel

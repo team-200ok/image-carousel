@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -d --watch",
     "start": "nodemon --exec babel-node server/server.js",
-    "seed": "node database/seed.js",
+    "psql:seed": "node database/psqlSeed.js",
+    "psql:init": "node database/createPsql.js",
+    "psql:csv": "node database/writeCSV.js",
     "jester": "jest"
   },
   "dependencies": {
@@ -23,6 +25,8 @@
     "lodash": "^4.17.15",
     "mysql2": "^2.0.1",
     "npm": "^6.13.1",
+    "pg": "^7.15.1",
+    "pg-pool": "^2.0.8",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "sequelize": "^5.21.2",
@@ -39,6 +43,7 @@
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "jest": "^24.9.0",
     "nodemon": "^2.0.1",
+    "pg-promise": "^10.3.1",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
