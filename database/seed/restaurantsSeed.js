@@ -6,7 +6,7 @@ const writeRestaurants = fs.createWriteStream('database/restaurants.csv');
 
 const writeTable = (writer, encoding) => {
     console.log('writing restaurants...')
-    let i = 10000000;
+    let i = 10000001;
     const write = () => {
         let ok = true;
         do {

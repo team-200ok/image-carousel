@@ -13,7 +13,7 @@ const writeTable = (writer, encoding) => {
         let ok = true;
         do {
             i -= 1;
-            if ((counter + 15) % 15 === 0) {
+            if ((counter + 10) % 10 === 0) {
               restaurantId++
             }
             counter++;
@@ -62,8 +62,6 @@ const writeTable = (writer, encoding) => {
             if (i > 0) {
                 writer.once('drain', write);
             }
-        }
-        write();
     }
 
    module.exports.createFile = () => {
