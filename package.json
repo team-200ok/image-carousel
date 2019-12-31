@@ -12,6 +12,7 @@
     "start": "nodemon --exec babel-node server/server.js",
     "psql:seed": "node database/psqlSeed.js",
     "psql:init": "node database/createPsql.js",
+    "psql:csv": "node database/writeCSV.js",
     "jester": "jest"
   },
   "dependencies": {

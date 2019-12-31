@@ -1,4 +1,4 @@
-const { Pool, Client } = require('pg');
+const { Pool } = require('pg');
 
 let pool = new Pool({
   host: 'localhost',
@@ -56,7 +56,6 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
     );`)
   })
   .then(() => {
-    console.log('trying to create resteraunt table');
     return pool.query(`CREATE TABLE restaurants (
       id SERIAL PRIMARY KEY,
       name TEXT,
@@ -66,7 +65,6 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
     );`)
   })
   .then(() => {
-    console.log('trying to create images table');
     return pool.query(`CREATE TABLE images (
       id SERIAL PRIMARY KEY,
       image_url TEXT,
@@ -82,6 +80,13 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
       FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
     );`)
   })
+  .then(() => {
+    console.log(`finished initializing database`);
+  })
   .catch((err) => {
     console.log(`Error creating tables: ${err}`)
   })
+
+  module.exports= {
+    pool: pool
+  }
