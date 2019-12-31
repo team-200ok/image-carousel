@@ -27,7 +27,7 @@ const writeTable = (writer, encoding) => {
             let data = image_url + helpful + not_helpful + cuisine_id + user_id + caption + restaurant_id + '\n';
             if (i === 0) {
                 writer.write(data, encoding);
-                console.log('done writing images')
+                console.log('done writing images');
             } else {
                 ok = writer.write(data, encoding);
             }
@@ -58,12 +58,14 @@ const writeTable = (writer, encoding) => {
             if (i === 10000000) {
               console.log(`completed 90 percent of images`);
             }
-        } while ( i > 0 && ok);
-            if (i > 0) {
-                writer.once('drain', write);
-            }
-    }
+          } while ( i > 0 && ok);
+              if (i > 0) {
+                  writer.once('drain', write);
+              }
+          }
+          write();
+      }
 
    module.exports.createFile = () => {
         writeTable(writeRestaurants, 'utf-8');
-    }
+    };
