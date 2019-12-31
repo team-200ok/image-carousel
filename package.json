@@ -10,9 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -d --watch",
     "start": "nodemon --exec babel-node server/server.js",
-    "psql:seed": "node database/psqlSeed.js",
-    "psql:init": "node database/createPsql.js",
-    "psql:csv": "node database/writeCSV.js",
+    "psql:seed": "node database/PostgreSQL/psqlSeed.js",
+    "psql:init": "node database/PostgreSQL/createPsql.js",
+    "psql:csv": "node database/PostgreSQL/writeCSV.js",
     "jester": "jest"
   },
   "dependencies": {

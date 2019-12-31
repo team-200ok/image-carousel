@@ -2,7 +2,7 @@ const faker = require('faker');
 const fs = require('fs');
 const path = require('path');
 
-const writeRestaurants = fs.createWriteStream('database/restaurants.csv');
+const writeRestaurants = fs.createWriteStream('database/PostgreSQL/restaurants.csv');
 
 const writeTable = (writer, encoding) => {
     console.log('writing restaurants...')

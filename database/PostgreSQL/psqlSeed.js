@@ -21,7 +21,7 @@ let pool = new Pool({
 
 (async () => {
   let begin = new Date().getTime();
-  let csvPath = '/Users/young/photo-carousel-service/database/'
+  let csvPath = '/Users/young/photo-carousel-service/database/PostgreSQL/'
   console.log(`starting async queries`);
 
   //seed 100 cuisines
