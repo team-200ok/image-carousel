@@ -10,9 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -d --watch",
     "start": "nodemon --exec babel-node server/server.js",
-    "psql:seed": "node database/psqlSeed.js",
-    "psql:init": "node database/createPsql.js",
-    "psql:csv": "node database/writeCSV.js",
+    "psql:seed": "node database/PostgreSQL/psqlSeed.js",
+    "psql:init": "node database/PostgreSQL/createPsql.js",
+    "psql:csv": "node database/PostgreSQL/writeCSV.js",
+    "mongo:init": "node database/MongoDB/createMongo.js",
     "jester": "jest"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "css-loader": "^3.2.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
     "jest": "^24.9.0",
+    "mongoose": "^5.8.3",
     "nodemon": "^2.0.1",
     "pg-promise": "^10.3.1",
     "style-loader": "^1.0.1",
