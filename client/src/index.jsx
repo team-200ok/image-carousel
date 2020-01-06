@@ -95,8 +95,15 @@ class App extends React.Component {
 
     axios.get(`http://localhost:3002/api/carousel/${endpoint}`)
       .then((data) => {
-
-        this.setState({ images: data.data });
+        console.log(data)
+        let imageArr = [];
+        for (let i = 0; i < data.data.rows.length; i++) {
+          let imageObj = {
+            imageUrl : data.data.rows[i].image_url
+          }
+          imageArr.push(imageObj)
+        }
+        this.setState({ images: imageArr });
 
       });
   }
