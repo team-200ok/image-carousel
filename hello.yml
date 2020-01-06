@@ -11,4 +11,4 @@ config:
 scenarios:
   - flow:
     - get:
-        url: "/"
+        url: "/api/carousel/123"
