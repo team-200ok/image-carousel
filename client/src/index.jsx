@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ImageList from './components/ImageList.jsx';
-import Popup from './components/Popup.jsx';
+import Popup from './components/popup.jsx';
 import RightIcon from './components/RightIcon.jsx';
 import LeftIcon from './components/LeftIcon.jsx';
 import style from './components/button.css';

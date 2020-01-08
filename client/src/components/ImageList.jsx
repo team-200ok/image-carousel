@@ -1,6 +1,6 @@
 var React = require('react');
 // var ReactDOM = require('react-dom');
-import style from './ImageList.css';
+import style from './imageList.css';
 
 class ImageList extends React.Component {
   constructor(props) {
