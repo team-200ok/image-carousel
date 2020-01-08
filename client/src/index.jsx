@@ -93,7 +93,7 @@ class App extends React.Component {
       endpoint = 1;
     };
 
-    axios.get(`http://localhost:3002/api/carousel/${endpoint}`)
+    axios.get(`/api/carousel/${endpoint}`)
       .then((data) => {
         console.log(data)
         let imageArr = [];

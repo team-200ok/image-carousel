@@ -48,7 +48,7 @@ let pool = new Pool({
   //seed 150M images
   let imagesBegin = new Date().getTime();
   console.log(`seeding images table`);
-  const image = await pool.query(`COPY images(image_url,helpful,not_helpful,cuisine_id,user_id,caption,restaurant_id) FROM '${csvPath}images.csv' CSV;`);
+  const image = await pool.query(`COPY images(image_url,helpful,not_helpful,created_at,cuisine_id,user_id,caption,restaurant_id) FROM '${csvPath}images.csv' CSV;`);
   let imagesFinish = new Date().getTime() - imagesBegin;
   console.log(`finished seeding 100M images in ${imagesFinish} ms`);
 
