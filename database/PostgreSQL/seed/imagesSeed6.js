@@ -2,12 +2,12 @@ const faker = require('faker');
 const fs = require('fs');
 const path = require('path');
 
-const writeRestaurants = fs.createWriteStream('database/PostgreSQL/images.csv');
+const writeRestaurants = fs.createWriteStream('database/PostgreSQL/images6.csv');
 
 const writeTable = (writer, encoding) => {
     console.log('writing images...')
     let i = 10000000;
-    let restaurantId = 0;
+    let restaurantId = 5000000;
     let counter = 0;
     const write = () => {
         let ok = true;
@@ -36,31 +36,31 @@ const writeTable = (writer, encoding) => {
                 ok = writer.write(data, encoding);
             }
             if (i === 9000000) {
-              console.log(`completed 10 percent of images`);
+              console.log(`completed 10 percent of images6`);
             }
             if (i === 8000000) {
-              console.log(`completed 20 percent of images`);
+              console.log(`completed 20 percent of images6`);
             }
             if (i === 7000000) {
-              console.log(`completed 30 percent of images`);
+              console.log(`completed 30 percent of images6`);
             }
             if (i === 6000000) {
-              console.log(`completed 40 percent of images`);
+              console.log(`completed 40 percent of images6`);
             }
             if (i === 5000000) {
-              console.log(`completed 50 percent of images`);
+              console.log(`completed 50 percent of images6`);
             }
             if (i === 4000000) {
-              console.log(`completed 60 percent of images`);
+              console.log(`completed 60 percent of images6`);
             }
             if (i === 3000000) {
-              console.log(`completed 70 percent of images`);
+              console.log(`completed 70 percent of images6`);
             }
             if (i === 2000000) {
-              console.log(`completed 80 percent of images`);
+              console.log(`completed 80 percent of images6`);
             }
             if (i === 1000000) {
-              console.log(`completed 90 percent of images`);
+              console.log(`completed 90 percent of images6`);
             }
           } while ( i > 0 && ok);
               if (i > 0) {

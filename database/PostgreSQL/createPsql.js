@@ -1,9 +1,9 @@
 const { Pool } = require('pg');
 
 let pool = new Pool({
-  host: 'localhost',
-  user: 'young',
-  database: 'mydb',
+  host: 'ec2-52-53-152-loc.us-west-1.compute.amazonaws.com',
+  user: 'postgres',
+  database: 'postgres',
   password: null,
 });
 pool.query(`DROP DATABASE IF EXISTS carousel;`)
@@ -16,8 +16,8 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
   .then(() => {
     pool.end();
     pool = new Pool({
-      host: 'localhost',
-      user: 'young',
+      host: 'ec2-52-53-152-54.us-west-1.compute.amazonaws.com',
+      user: 'postgres',
       database: 'carousel',
       password: null,
     });
@@ -60,7 +60,6 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
       id SERIAL PRIMARY KEY,
       name TEXT,
       cuisine_id INTEGER,
-      FOREIGN KEY (cuisine_id) REFERENCES cuisines(id),
       image_count SMALLINT
     );`)
   })
@@ -72,12 +71,9 @@ pool.query(`DROP DATABASE IF EXISTS carousel;`)
       not_helpful SMALLINT,
       created_at DATE NOT NULL DEFAULT CURRENT_DATE,
       cuisine_id INTEGER,
-      FOREIGN KEY (cuisine_id) REFERENCES cuisines(id),
       user_id INTEGER,
-      FOREIGN KEY (user_id) REFERENCES users(id),
       caption TEXT,
-      restaurant_id INTEGER,
-      FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
+      restaurant_id INTEGER
     );`)
   })
   .then(() => {
