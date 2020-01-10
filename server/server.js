@@ -5,7 +5,7 @@ const controller = require('./controller');
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3002;
+const port = process.env.node_env || process.env.PORT || 3000;
 const cors = require('cors');
 
 app.use(cors());
